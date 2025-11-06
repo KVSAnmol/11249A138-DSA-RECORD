@@ -1,5 +1,6 @@
+#include<stdio.h>
 int linearSearch(int arr[], int n, int key) {
-int i; // declare here
+int i; 
 for (i = 0; i &lt; n; i++) {
 if (arr[i] == key)
 return i;
@@ -18,5 +19,5 @@ printf(&quot;Element %d not found\n&quot;, target);
 }
 return 0;
 }
-Output
+Output:
 Element 6 found at index 3.

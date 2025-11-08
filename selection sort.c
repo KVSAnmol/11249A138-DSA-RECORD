@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Function to perform Selection Sort
 void selectionSort(int arr[], int n) {
     int i, j, minIndex, temp;
 
@@ -11,33 +9,25 @@ void selectionSort(int arr[], int n) {
             if (arr[j] < arr[minIndex])
                 minIndex = j;
         }
-
-        // Swap the found minimum element with the first element
         temp = arr[i];
         arr[i] = arr[minIndex];
         arr[minIndex] = temp;
     }
 }
-
-// Function to print array elements
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
     printf("\n");
 }
-
 int main() {
     int arr[] = {64, 25, 12, 22, 11};
     int n = sizeof(arr) / sizeof(arr[0]);
-
     printf("Original array: ");
     printArray(arr, n);
-
     selectionSort(arr, n);
-
     printf("Sorted array (Selection Sort): ");
     printArray(arr, n);
-
     return 0;
 }
+
 

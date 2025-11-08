@@ -32,11 +32,10 @@ printf(&quot;Enqueued %d\n&quot;, value);
 int dequeue(Queue *q) {
 if (isEmpty(q)) {
 printf(&quot;Queue Underflow! Cannot dequeue\n&quot;);
-return -1; // Indicate error
+return -1; 
 }
 int value = q-&gt;arr[q-&gt;front];
 if (q-&gt;front == q-&gt;rear) {
-// Queue has only one element, reset after dequeue
 q-&gt;front = -1;
 q-&gt;rear = -1;
 } else {
@@ -69,3 +68,4 @@ printf(&quot;Queue is not empty\n&quot;);
 }
 return 0;
 }
+
